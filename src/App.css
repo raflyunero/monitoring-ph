@@ -1,17 +1,18 @@
+/* Reset dan pengaturan dasar */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-color: #b0e57c; /* Warna hijau muda */
+  background: linear-gradient(to left, #75d23f, #A8D8B9);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  min-height: 100vh;
 }
 
-
+/* Header */
 header {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   display: flex;
@@ -22,25 +23,12 @@ header {
   width: 100%;
 }
 
-.top-right-text {
-  font-size: 17px;
-  font-weight: bold;
-  color:green !important; /* Warna merah mencolok */
-
-  /* Posisi di kanan atas */
-  position: absolute;
-  right: 80px; /* Geser lebih ke kiri (sesuaikan jika perlu) */
-  top: 20x; /* Naikkan angka ini untuk menurunkan teks */
-
-  /* Tambahkan latar belakang untuk memastikan terlihat */
-  background-color: rgba(255, 255, 255, 0.5); 
-  padding: 5px;
-}
-
-
+/* Logo dan judul di kiri */
 .logo-container {
   display: flex;
   align-items: center;
+  text-align: left;
+  flex-grow: 1;
 }
 
 .logo-container img {
@@ -52,19 +40,64 @@ header {
   font-size: 24px;
   font-weight: bold;
   color: #333;
+  margin: 0;
 }
 
-.moisture-text {
-  font-size: 20px; /* Sesuaikan ukuran */
-  font-weight: bold;
-  color: #333;
-  margin-top: 15px; /* Jarak dari elemen pH */
-}
-
-
+/* Kontainer utama */
+/* Kontainer utama */
 main {
   text-align: center;
-  font-size: 32px;
+  font-size: 24px;
   font-weight: bold;
   color: #333;
+  margin-top: 40px; /* Sebelumnya 100px, dikurangi agar lebih naik */
+}
+
+/* Kontainer untuk pH & kelembaban */
+.sensor-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  margin-top: -10px; /* Sebelumnya 20px, dikurangi agar lebih naik */
+}
+
+/* Tulisan pH dan Kelembapan */
+.sensor-text {
+  font-size: 36px;
+  font-weight: bold;
+  color: #3268a1;  /* Warna biru untuk pH */
+}
+
+
+/* Grafik Monitoring pH */
+.chart-container {
+  margin-top: 20px;
+}
+
+/* Footer */
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-top: 2px solid #ccc;
+  text-align: center;
+  padding: 5px 10px;
+  min-height: 25px;
+}
+
+/* Footer text */
+.footer-text {
+  font-size: 10px;
+  font-weight: bold;
+  color: rgba(0, 128, 0, 0.7);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  transition: color 0.3s ease-in-out;
+}
+
+.footer-text:hover {
+  color: rgba(0, 128, 0, 1);
 }
